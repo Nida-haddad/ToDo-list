@@ -1,0 +1,196 @@
+html {
+    /* width: 100%;
+    height: 100%; */
+}
+
+body {
+    /* height: 100%;
+    width: 100%; */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(211deg, #2B86C5 0%, #784BA0 67%);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+
+}
+
+.container {
+
+    margin: 100px auto;
+    background-color: white;
+    width: 70%;
+    height: fit-content;
+    border-radius: 7px;
+    padding: 10px 30px;
+}
+
+.title {
+    color: #2B86C5;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+}
+
+.add-elements {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container #task-input {
+    width: 80%;
+    /* margin: 0 auto; */
+    padding: 9px 20px;
+    outline: 0;
+    border: 2px solid hsl(0, 1%, 62%);
+    /* border: none; */
+    border-radius: 5px;
+
+    transition: 0.5s;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0px;
+
+
+}
+
+#task-input:focus {
+    border: 2px solid #2B86C5;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0px;
+}
+
+.container #add-task {
+    background-color: #2B86C5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-right: 0;
+    padding: 10px 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.container #add-task:hover {
+    cursor: pointer;
+    background-color: #2270a8;
+}
+
+.all-list {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 auto;
+    width: 92%;
+
+}
+
+.all-list .icon {
+    color: gray;
+    padding-right: 5px;
+}
+
+.all-list p {
+    color: gray;
+    font-size: 15px;
+}
+
+.output {
+    width: 92%;
+    margin: 0 auto;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgb(192, 192, 192);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 3px;
+}
+
+table tr:hover {
+    /* transform: scale(1.05); */
+    background-color: rgba(227, 227, 227, 0.384);
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 10px 2px rgb(197, 193, 255); */
+    /* box-shadow: 0px 15px 10px -15px #949494; */
+
+
+}
+
+
+table tr td input {
+    margin-right: 20px;
+}
+
+table tr td .trash {
+    color: #de3543ee;
+    /* transition: 0.5s; */
+}
+
+table tr td .edit {
+    color: rgb(185, 185, 185);
+    /* color: white; */
+    /* border: none; */
+    /* border-radius: 6px; */
+    margin-right: 20px;
+    /* padding: 5px 10px; */
+
+    /* transition: 0.5s; */
+
+}
+
+table tr td .edit:hover {
+    color: gray;
+    transform: scale(1.05);
+
+}
+
+.tasksTitle {
+    text-decoration: line-through;
+    color: gray;
+}
+
+table tr td .trash:hover {
+    color: #c42f3c;
+    transform: scale(1.05);
+
+}
+
+table tr td i:hover {
+    cursor: pointer;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+/* 
+tr:first-child {
+    border-top: 1px solid rgb(192, 192, 192);
+} */
+
+/* input[type="checkbox"]:checked label {
+    background-color: #2B86C5;
+} */
+
+.taskinfo:has(input:checked)~.actions .edit {
+    pointer-events: none;
+    color: rgb(239, 239, 239);
+}
